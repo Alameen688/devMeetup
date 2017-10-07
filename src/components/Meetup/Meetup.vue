@@ -28,13 +28,15 @@
           </v-card-media>
           <v-card-text>
             <div class="info--text">{{ meetup.date | fDate}} - {{ meetup.location }}</div>
+            <div>
+              <my-edt-date-dialog :meetup="meetup" v-if="userIsCreator"></my-edt-date-dialog>
+              <my-edt-time-dialog :meetup="meetup" v-if="userIsCreator"></my-edt-time-dialog>
+            </div>
             <div>{{ meetup.description }}</div>
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn class="primary">
-              Register
-            </v-btn>
+            <my-registration-dialog v-if="userIsAuthenticated && !userIsCreator" :meetupId="meetup.id"></my-registration-dialog>
           </v-card-actions>
         </v-card>
       </v-flex>
