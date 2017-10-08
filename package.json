@@ -5,6 +5,7 @@
   "author": "mentOS",
   "private": true,
   "scripts": {
+    "prestart": "npm run build",
     "dev": "node build/dev-server.js",
     "start": "npm run dev",
     "build": "node build/build.js",
