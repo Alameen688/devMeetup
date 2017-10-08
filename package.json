@@ -5,7 +5,6 @@
   "author": "mentOS",
   "private": true,
   "scripts": {
-    "prestart": "npm run build",
     "dev": "node build/dev-server.js",
     "start": "npm run dev",
     "build": "node build/build.js",
@@ -16,7 +15,8 @@
     "vue": "^2.4.2",
     "vue-router": "^2.7.0",
     "vuetify": "^0.15.1",
-    "vuex": "^2.4.0"
+    "vuex": "^2.4.0",
+    "chalk": "^2.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
